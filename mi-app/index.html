@@ -1,13 +1,30 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mi-app</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Velocidad Promedio</title>
+</head>
+<body>
+
+<h2>Calcular Velocidad Promedio</h2>
+
+<input type="number" id="distancia" placeholder="Ingrese distancia">
+<input type="number" id="tiempo" placeholder="Ingrese tiempo">
+
+<button onclick="calcular()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcular(){
+let distancia = document.getElementById("distancia").value;
+let tiempo = document.getElementById("tiempo").value;
+
+let velocidad = distancia / tiempo;
+
+document.getElementById("resultado").innerHTML =
+"La velocidad promedio es: " + velocidad;
+}
+</script>
+
+</body>
 </html>
